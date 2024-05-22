@@ -1,0 +1,8 @@
+train: data/images/train
+val: data/images/val
+test: data/images/test
+
+# Classes
+#correct one
+nc: 2 #remove dog
+names: ['hat', 'person']
