@@ -94,8 +94,8 @@ if __name__ == "__main__":
     if not os.path.isdir('data/plotted_annotations_txt'):
         os.mkdir('data/plotted_annotations_txt')
 
-    jpg_fp = os.path.join("data", "images", "test", "000402.jpg")
-    txt_fp = os.path.join("data", "labels", "test", "000402.txt")
+    jpg_fp = os.path.join("data", "images", "val", "part2_000783.jpg")
+    txt_fp = os.path.join("data", "labels", "val", "part2_000783.txt")
     image = draw_rectangles_from_text(jpg_fp, txt_fp)
     cv2.imwrite('data/plotted_annotations_txt/' + os.path.basename(jpg_fp), image)
     
