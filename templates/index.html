@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Helment Real-Time Object Detection</title>
+</head>
+<body>
+    <h1>YOLOv8 Helmet Real-Time Object Detection</h1>
+    <button id="toggleButton">Start Video</button>
+    <div>
+        <img id="videoFeed" src="" width="100%" style="display: none;">
+    </div>
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            var videoFeed = document.getElementById("videoFeed");
+            var button = document.getElementById("toggleButton");
+            if (videoFeed.style.display === "none") {
+                videoFeed.style.display = "block";
+                videoFeed.src = "{{ url_for('video_feed') }}";
+                button.textContent = "Stop Video";
+            } else {
+                videoFeed.style.display = "none";
+                videoFeed.src = "";
+                button.textContent = "Start Video";
+                fetch("/toggle_video", { method: "POST" });
+            }
+        });
+    </script>
+</body>
+</html>
