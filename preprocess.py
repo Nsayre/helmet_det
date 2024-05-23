@@ -71,7 +71,7 @@ def preprocess():
     # all_jpg_path = os.path.join("raw_data", "VOC2028", "JPEGImages", "*.jpg")
     # sorted_jpg_fp = sorted(glob(all_jpg_path))
     # sorted_xml_fp = sorted(glob(annot_path))
-    
+
     # # loop through all images and annotations, saving plotted images
     # print("creating annotated xml images...")
     # for jpg_fp, xml_fp in zip(sorted_jpg_fp, sorted_xml_fp):
@@ -205,7 +205,7 @@ def preprocess():
         os.mkdir('data/labels/test/')
     if not os.path.isdir("data/labels/val"):
         os.mkdir('data/labels/val')
-    
+
     def segregate_data(df, img_path, label_path, train_img_path, train_label_path):
       filenames = []
       for filename in df.filename:
@@ -251,14 +251,14 @@ def preprocess():
     segregate_data(df_test, src_img_path, src_label_path, test_img_path, test_label_path)
     segregate_data(df_val, src_img_path, src_label_path, val_img_path, val_label_path)
 
-    # print("No. of Training images", len(os.listdir(train_img_path)))
-    # print("No. of Training labels", len(os.listdir(train_label_path)))
+    print("No. of Training images", len(os.listdir(train_img_path)))
+    print("No. of Training labels", len(os.listdir(train_label_path)))
 
-    # print("No. of test images", len(os.listdir(test_img_path)))
-    # print("No. of test labels", len(os.listdir(test_label_path)))
+    print("No. of test images", len(os.listdir(test_img_path)))
+    print("No. of test labels", len(os.listdir(test_label_path)))
 
-    # print("No. of valid images", len(os.listdir(val_img_path)))
-    # print("No. of valid labels", len(os.listdir(val_label_path)))
+    print("No. of valid images", len(os.listdir(val_img_path)))
+    print("No. of valid labels", len(os.listdir(val_label_path)))
 
     # breakpoint()
 
