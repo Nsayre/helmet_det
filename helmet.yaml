@@ -1,9 +1,0 @@
-path : ../Data
-train: images/train
-val: images/val
-test: images/test
-
-# Classes
-names:
-  0: helmet
-  1: person
