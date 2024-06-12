@@ -1,4 +1,6 @@
 # Safety Helmet Detection
+View our app here ➡️ 👷 [Safety Helmet Detection App](https://helmet-det.streamlit.app/) 👷‍♀️
+<br>
 The purpose of this project is to increase workplace safety by creating a machine learning model that detects whether a worker is wearing a safety helmet or not.
 <br>
 This is a final project for Le Wagon Tokyo Data Science & AI batch #1639 and was presented on May 31st 2024 at the Shibuya Google for Startups campus.
@@ -12,8 +14,6 @@ The YOLO model was selected for it's excellent object detection capabilities and
 Specifically YOLO v8n was selected for its fast detection speed.
 <br>
 ![image](https://github.com/Nsayre/helmet_det/assets/6730926/d4b6fad5-170d-4123-8be3-47d6f3e1f34c)
-<br>
-The deliverable of this project was a streamlit application that performs object detection in real time that can be viewed here: [Streamlit link](TODO) (Work in progress)
 <br>
 ![image](https://github.com/Nsayre/helmet_det/assets/6730926/f48c1a9c-2ebd-491c-b639-5cffc8d23388)
 ## Getting Started
