@@ -4,6 +4,13 @@ import av
 import cv2
 from ultralytics import YOLO
 import numpy as np
+from twilio.rest import Client
+
+# Get server credentials from environment variables
+account_sid = st.secrets["general"]["TWILIO_ACCOUNT_SID"]
+auth_token = st.secrets["general"]["TWILIO_AUTH_TOKEN"]
+client = Client(account_sid, auth_token)
+token = client.tokens.create()
 
 # Set up the Streamlit app
 st.set_page_config(page_title="Safety Helmet Detection", page_icon=":construction_worker:", layout="wide")
@@ -90,7 +97,9 @@ def video_frame_callback(frame):
 ctx = webrtc_streamer(
     key="example",
     video_frame_callback=video_frame_callback,
-    rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
+    rtc_configuration = {
+    "iceServers": token.ice_servers
+                        },
     async_processing=True,
     media_stream_constraints={"video": True, "audio": False},  # Disable audio
 )
