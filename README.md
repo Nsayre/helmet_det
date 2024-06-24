@@ -5,7 +5,7 @@ The purpose of this project is to increase workplace safety by creating a machin
 <br>
 This is a final project for Le Wagon Tokyo Data Science & AI batch #1639 and was presented on May 31st 2024 at the Shibuya Google for Startups campus.
 <br>
-[Safety Helmet Detection Youtube link](TODO) (Awaiting upload from Le Wagon)
+[Presentation Video - Le Wagon Spring 2024 - Demo Day - Safety Helmet Detection](https://www.youtube.com/watch?v=CLhtyzqgObE) (From 29:45)
 <br>
 [Canva Presentation Link](https://helmet-detection.my.canva.site/)
 <br>
